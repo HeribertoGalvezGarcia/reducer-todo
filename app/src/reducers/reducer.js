@@ -16,7 +16,7 @@ function reducer(state, action) {
     case "CLEAR_COMPLETED":
       return state.filter(({completed}) => !completed);
     case "ADD_TODO":
-      return [...state, {id: new Date(), completed: false, item: action.item}];
+      return [...state, {id: new Date(), completed: false, item: action.item, completeBy: action.date}];
     default:
       return state;
   }
